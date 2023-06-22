@@ -5,12 +5,12 @@ namespace App\Domain\Services;
 use App\Exceptions\SystemExceptions\ServiceExceptions;
 
 /**
- * @property BairroService $messageService
+ * @property ExampleService $exampleService
  */
 class BaseService
 {
     public const SERVICES = [
-        'messageService'            => BairroService::class,
+        'exampleService'            => ExampleService::class,
     ];
 
     public function __get($service)
