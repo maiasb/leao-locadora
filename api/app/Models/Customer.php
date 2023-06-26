@@ -7,16 +7,11 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int id
- * @property string placa
- * @property string renavam
- * @property string chassi
- * @property Carbon ano_fabricacao
- * @property Carbon ano_modelo
- * @property string marca
- * @property string modelo
- * @property string cor
- * @property int numero_motor
- * @property string tipo_combustível
+ * @property string nome
+ * @property Carbon nascimento
+ * @property string telefone
+ * @property string celular
+ * @property boolean celular_whatsapp
  */
 
 class Customer extends Model
@@ -24,6 +19,10 @@ class Customer extends Model
     protected $table = 'clientes';
 
     protected $fillable = [
-        'nome'
+        'nome',
+        'nascimento',
+        'telefone',
+        'celular',
+        'celular_whatsapp',
     ];
 }
