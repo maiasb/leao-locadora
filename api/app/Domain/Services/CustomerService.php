@@ -21,6 +21,10 @@ class CustomerService extends BaseService
 
         $this->CNHService->create($filters["cnh"]);
 
+        $filters["endereco"]["id_cliente"] = $customer->id;
+
+        $this->addressService->create($filters["endereco"]);
+
         return $customer;
     }
 }

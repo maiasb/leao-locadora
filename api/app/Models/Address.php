@@ -6,20 +6,26 @@ use Illuminate\Database\Eloquent\Model;
 
 /**
  * @property int id
+ * @property string cep
+ * @property string rua
+ * @property string complemento
+ * @property string bairro
+ * @property string municipio
  * @property string numero
- * @property string categoria
- * @property string data_provisoria
  * @property int id_cliente
  */
 
-class CNH extends Model
+class Address extends Model
 {
-    protected $table = 'cnh';
+    protected $table = 'endereco';
 
     protected $fillable = [
+        'cep',
+        'rua',
+        'complemento',
+        'bairro',
+        'municipio',
         'numero',
-        'categoria',
-        'data_provisoria',
         'id_cliente'
     ];
 

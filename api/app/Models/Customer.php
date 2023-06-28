@@ -10,6 +10,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property string cpf
  * @property string nascimento
  * @property string telefone
+ * @property boolean whatsapp
  */
 
 class Customer extends Model
@@ -20,7 +21,8 @@ class Customer extends Model
         'nome',
         'cpf',
         'nascimento',
-        'telefone'
+        'telefone',
+        'whatsapp'
     ];
 
     /**
@@ -32,6 +34,11 @@ class Customer extends Model
 
     public function cnh()
     {
-        return $this->hasOne(CNH::class, 'customer_id', 'id');
+        return $this->hasOne(CNH::class, 'id_cliente', 'id');
+    }
+
+    public function address()
+    {
+        return $this->hasOne(CNH::class, 'id_cliente', 'id');
     }
 }
