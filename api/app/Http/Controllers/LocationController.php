@@ -20,4 +20,11 @@ class LocationController extends Controller
 
         return response()->json($this->response, Response::HTTP_OK);
     }
+
+    public function customerLocationHistory($id): \Illuminate\Http\JsonResponse
+    {
+        $this->response = $this->locationService->findBy('id_cliente', $id);
+
+        return response()->json($this->response, Response::HTTP_OK);
+    }
 }
