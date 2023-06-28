@@ -10,13 +10,12 @@ use Illuminate\Database\Eloquent\Model;
  * @property string placa
  * @property string renavam
  * @property string chassi
- * @property Carbon ano_fabricacao
- * @property Carbon ano_modelo
+ * @property string ano_fabricacao
+ * @property string ano_modelo
  * @property string marca
  * @property string modelo
  * @property string cor
- * @property int numero_motor
- * @property string tipo_combustível
+ * @property string tipo_combustivel
  */
 
 class Car extends Model
@@ -32,7 +31,13 @@ class Car extends Model
         'marca',
         'modelo',
         'cor',
-        'numero_motor',
-        'tipo_combustível'
+        'tipo_combustivel'
     ];
+
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
 }
