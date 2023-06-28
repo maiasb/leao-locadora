@@ -8,11 +8,9 @@ use Illuminate\Database\Eloquent\Model;
 /**
  * @property int id
  * @property string tipo_locacao
- * @property Carbon data_retirada
- * @property Carbon data_devolucao
+ * @property string data_retirada
+ * @property string data_devolucao
  * @property boolean seguro
- * @property double quantidade_combustivel
- * @property string tipo_combustivel
  * @property Customer customer
  * @property Car car
  * @property int cliente_id
@@ -24,10 +22,18 @@ class Location extends Model
     protected $table = 'locacoes';
 
     protected $fillable = [
-        'nome',
-        'nascimento',
-        'telefone',
-        'celular',
-        'celular_whatsapp',
+        'tipo_locacao',
+        'data_retirada',
+        'data_devolucao',
+        'seguro',
+        'id_cliente',
+        'id_carro'
     ];
+
+    /**
+     * Indicates if the model should be timestamped.
+     *
+     * @var bool
+     */
+    public $timestamps = false;
 }

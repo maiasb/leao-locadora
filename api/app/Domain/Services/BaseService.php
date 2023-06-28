@@ -6,15 +6,19 @@ use App\Exceptions\SystemExceptions\ServiceExceptions;
 
 /**
  * @property CustomerService $customerService
+ * @property CarService $carService
  * @property CNHService $CNHService
  * @property AddressService $addressService
+ * @property LocationService $locationService
  */
 class BaseService
 {
     public const SERVICES = [
         'customerService' => CustomerService::class,
+        'carService' => CarService::class,
         'CNHService' => CNHService::class,
-        'addressService' => AddressService::class
+        'addressService' => AddressService::class,
+        'locationService' => LocationService::class
     ];
 
     public function __get($service)

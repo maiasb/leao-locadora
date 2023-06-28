@@ -20,3 +20,4 @@ Route::middleware('auth:sanctum')->get('/user', function (Request $request) {
 
 require __DIR__ . '/clientes.php';
 require __DIR__ . '/carros.php';
+require __DIR__ . '/locacoes.php';
