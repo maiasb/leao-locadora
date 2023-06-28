@@ -15,6 +15,12 @@ class CustomerService extends BaseService
 
     public function create(array $filters): \Illuminate\Database\Eloquent\Model
     {
-        return $this->repository->create($filters);
+        $customer = $this->repository->create($filters);
+
+        $filters["cnh"]["id_cliente"] = $customer->id;
+
+        $this->CNHService->create($filters["cnh"]);
+
+        return $customer;
     }
 }
