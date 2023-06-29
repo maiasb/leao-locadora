@@ -10,6 +10,7 @@ use App\Exceptions\SystemExceptions\ServiceExceptions;
  * @property CNHService $CNHService
  * @property AddressService $addressService
  * @property LocationService $locationService
+ * @property AdditionalDriverService $additionalDriverService
  */
 class BaseService
 {
@@ -18,7 +19,8 @@ class BaseService
         'carService' => CarService::class,
         'CNHService' => CNHService::class,
         'addressService' => AddressService::class,
-        'locationService' => LocationService::class
+        'locationService' => LocationService::class,
+        'additionalDriverService' => AdditionalDriverService::class
     ];
 
     public function __get($service)

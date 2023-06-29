@@ -26,13 +26,28 @@ class LocationService extends BaseService
 
         $this->carService->findOneBy('id', $filters['id_carro']);
 
-        return $this->repository->create($filters);
+        $location = $this->repository->create($filters);
+
+        if (isset($filters["additionaldrivers"])) {
+            foreach ($filters["additionaldrivers"] as $additional) {
+                $additionalDriver = $this->customerService->create($additional);
+
+                $this->additionalDriverService->create([
+                    "id_cliente" => $location->id_cliente,
+                    "id_motorista_adicional" => $additionalDriver->id,
+                    "id_locacao" => $location->id
+                ]);
+            }
+        }
+
+        return $location;
     }
 
     /**
      * @throws BaseExceptions
      */
-    public function update($id, array $filters) {
+    public function update($id, array $filters)
+    {
         $location = $this->findOneBy('id', $id);
 
         return $this->repository->update($location->id, $filters);

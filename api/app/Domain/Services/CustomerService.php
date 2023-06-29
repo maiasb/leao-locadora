@@ -21,13 +21,17 @@ class CustomerService extends BaseService
     {
         $customer = $this->repository->create($filters);
 
-        $filters["cnh"]["id_cliente"] = $customer->id;
+        if (isset($filters["cnh"])) {
+            $filters["cnh"]["id_cliente"] = $customer->id;
 
-        $this->CNHService->create($filters["cnh"]);
+            $this->CNHService->create($filters["cnh"]);
+        }
 
-        $filters["endereco"]["id_cliente"] = $customer->id;
+        if (isset($filters["endereco"])) {
+            $filters["endereco"]["id_cliente"] = $customer->id;
 
-        $this->addressService->create($filters["endereco"]);
+            $this->addressService->create($filters["endereco"]);
+        }
 
         return $customer;
     }
@@ -35,7 +39,8 @@ class CustomerService extends BaseService
     /**
      * @throws BaseExceptions
      */
-    public function update($id, array $filters) {
+    public function update($id, array $filters)
+    {
         $customer = $this->findOneBy('id', $id);
 
         return $this->repository->update($customer->id, $filters);
