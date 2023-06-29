@@ -6,7 +6,6 @@
     <link rel="stylesheet" href="styles/style_cdveiculos_sidbar.css">
     <link rel="stylesheet" href="styles/style_form_cad_veiculos.css">
     <script src="https://kit.fontawesome.com/48a84a0bce.js" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
     <script src="script_cad_veículos.js" defer></script>
 
     <title>Cadastro de veículos</title>
@@ -51,24 +50,24 @@
     </a>
 </div>
 <body>
-    
+
     <div class="container">
         <div class="form_box">
             <h2 class="title">Cadastro de veículos</h2>
-            <form class="form-childs" action="" method="get" id="form">
+            <div class="form-childs">
                 <input type="text" name="Placa" placeholder="Placa" id="placa">
                 <input type="text" name="Renavam" placeholder="Renavam" id="renavam">
-                <input type="text" name="Chassi" placeholder="Chassi" id="Chassi">
+                <input type="text" name="Chassi" placeholder="Chassi" id="chassi">
                 <input type="text" name="Ano de fabricação" placeholder="Fabricação" id="ano_fabricacao">
                 <input type="text" name="Ano do modelo" placeholder="Modelo" id="ano_modelo">
-                <input type="text" name="Marca/Modelo" placeholder="Marca/modelo" id="marca">
-                <input type="text" name="Cor" id="cor">
-                <input type="text" name="Número do motor" placeholder="Nº do motor" id="eighth">
+                <input type="text" name="Marca" placeholder="Marca" id="marca">
+                <input type="text" name="Modelo" placeholder="Modelo" id="modelo">
+                <input type="text" name="Cor" placeholder="Cor" id="cor">
                 <input type="text" name="Típo de combustível" placeholder="combustível" id="tipo_combustivel">
-                
+
                 <textarea name="Informações adicionais" placeholder="Informações adicionais"></textarea>
-                <button type="submit">Salvar</button>
-            </form>
+                <button onclick="sendCar()">Salvar</button>
+            </div>
         </div>
     </div>
 

@@ -1,6 +1,8 @@
 
 
 
+function sendCar() {
+
 const placa = document.getElementById('placa').value;
 const renavam = document.getElementById('renavam').value;
 const chassi = document.getElementById('chassi').value;
@@ -10,7 +12,7 @@ const anoFabricacao = document.getElementById('ano_fabricacao').value;
 const anoModelo = document.getElementById('ano_modelo').value;
 const cor = document.getElementById('cor').value;
 const tipoCombustivel = document.getElementById('tipo_combustivel').value;
-  
+
   const body = JSON.stringify({
     placa: placa,
     renavam: renavam,
@@ -22,7 +24,7 @@ const tipoCombustivel = document.getElementById('tipo_combustivel').value;
     cor: cor,
     tipo_combustivel: tipoCombustivel
  });
-  
+
 const options = {
    method: 'POST',
    headers: { 'Content-Type': 'application/json' },
@@ -34,3 +36,5 @@ const options = {
  .then(response => console.log(response))
  .catch(err => console.error(err));//
 
+//  location.reload()
+}
