@@ -17,6 +17,9 @@ class LocationService extends BaseService
         $this->repository = $repository;
     }
 
+    /**
+     * @throws BaseExceptions
+     */
     public function create(array $filters): \Illuminate\Database\Eloquent\Model
     {
         $this->customerService->findOneBy('id', $filters['id_cliente']);

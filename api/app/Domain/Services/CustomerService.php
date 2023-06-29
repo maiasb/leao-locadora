@@ -35,6 +35,15 @@ class CustomerService extends BaseService
     /**
      * @throws BaseExceptions
      */
+    public function update($id, array $filters) {
+        $customer = $this->findOneBy('id', $id);
+
+        return $this->repository->update($customer->id, $filters);
+    }
+
+    /**
+     * @throws BaseExceptions
+     */
     public function findOneBy($key, $value): Customer
     {
         /** @var Customer $customer */

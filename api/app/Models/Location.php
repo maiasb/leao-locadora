@@ -13,6 +13,10 @@ use Illuminate\Database\Eloquent\Model;
  * @property string data_devolucao
  * @property string pericia_retirada
  * @property string pericia_devolucao
+ * @property int litros_combustivel_retirada
+ * @property int litros_combustivel_devolucao
+ * @property boolean limpo_retirada
+ * @property boolean limpo_devolucao
  * @property int cliente_id
  * @property int carro_id
  * @property Customer customer
@@ -30,6 +34,10 @@ class Location extends Model
         'data_devolucao',
         'pericia_retirada',
         'pericia_devolucao',
+        'litros_combustivel_retirada',
+        'litros_combustivel_devolucao',
+        'limpo_retirada',
+        'limpo_devolucao',
         'id_cliente',
         'id_carro'
     ];

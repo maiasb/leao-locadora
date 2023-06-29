@@ -16,8 +16,6 @@ use Illuminate\Database\Eloquent\Model;
  * @property string modelo
  * @property string cor
  * @property string tipo_combustivel
- * @property int litros_combustivel
- * @property boolean limpo
  */
 
 class Car extends Model
@@ -33,9 +31,7 @@ class Car extends Model
         'marca',
         'modelo',
         'cor',
-        'tipo_combustivel',
-        'litros_combustivel',
-        'limpo'
+        'tipo_combustivel'
     ];
 
     /**

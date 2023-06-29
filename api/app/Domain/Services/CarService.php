@@ -27,6 +27,15 @@ class CarService extends BaseService
     /**
      * @throws BaseExceptions
      */
+    public function update($id, array $filters) {
+        $car = $this->findOneBy('id', $id);
+
+        return $this->repository->update($car->id, $filters);
+    }
+
+    /**
+     * @throws BaseExceptions
+     */
     public function findOneBy($key, $value): Car
     {
         /** @var Car $car */
