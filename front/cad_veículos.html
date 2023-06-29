@@ -63,7 +63,16 @@
                 <input type="text" name="Marca" placeholder="Marca" id="marca">
                 <input type="text" name="Modelo" placeholder="Modelo" id="modelo">
                 <input type="text" name="Cor" placeholder="Cor" id="cor">
-                <input type="text" name="Típo de combustível" placeholder="combustível" id="tipo_combustivel">
+
+                <div>
+                    <label>Combustível</label>
+                    <select id="tipo_combustivel">
+                        <option value="">Selecionar</option>
+                        <option value="G">Gasolina</option>
+                        <option value="E">Etanol</option>
+                        <option value="A">Álcool</option>
+                    </select>
+                </div>
 
                 <textarea name="Informações adicionais" placeholder="Informações adicionais"></textarea>
                 <button onclick="sendCar()">Salvar</button>
