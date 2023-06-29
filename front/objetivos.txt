@@ -1,0 +1,11 @@
+REQUISITOS - CADASTRO DE VEICULOS:
+cada input deve conter a descrição solicitada.
+Placa
+Renavam;
+Chassi;
+Ano de fabricação;
+Ano do modelo;
+Marca/Modelo;
+Cor(deixar setado por padrão branco);
+Número do motor;
+Tipo de Combustível.

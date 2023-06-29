@@ -1,0 +1,157 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+body {
+    margin: 0;
+    font-family: 'Poppins', sans-serif;
+}
+
+body * {
+    box-sizing: border-box;
+}
+
+.main-login {
+    width: 100vw;
+    height: 100vh;
+    background: #000020;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-esquerdo {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.card-esquerdo > h1 {
+    text-align: center;
+    font-size: 3vw;
+    color: #fada28;
+    margin-bottom: 30px;
+}
+
+.card-esquerdo > img {
+
+    width: 35vw;
+    height: 60%;
+}
+
+.card-direito {
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.card-direito > img {
+
+    width: 25px;
+    height: 25px;
+}
+
+.card-login {
+    width: 60%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 30px 35px;
+    border-radius: 20px;
+    box-shadow: 0px 10px 40px #00000056;
+    background: #171a4a;
+}
+
+.card-login > h1 {
+    color: #fada28;
+    font-weight: 800;
+    margin: 0;
+}
+
+.textfield {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    margin: 10px;
+}
+
+.textfield > input {
+    width: 100%;
+    border: none;
+    border-radius: 10px;
+    padding: 15px;
+    background: #2f2c70;
+    color: #fada28;
+    font-size: 12px;
+    box-shadow: 0px 10px 40px #00000056;
+    outline: none;
+    box-sizing: border-box;
+}
+
+.textfield > label{
+    color: #fada28;
+    margin-bottom: 10px;
+}
+
+.textfield > input::placeholder {
+    color:rgba(240, 248, 255, 0.297);
+}
+
+.btn-login {
+    width: 100%;
+    padding: 16px 0px;
+    margin: 25px;
+    border: none;
+    border-radius: 10px;
+    outline: none;
+    text-transform: uppercase;
+    font-weight: 800;
+    letter-spacing: 3px;
+    color:#000020;
+    background: #fada28;
+    cursor: pointer;
+}
+
+.group-down {
+    color: #fada28;
+}
+
+.group-down > p > a{
+    color: #ffffff;
+}
+
+@media only screen and (max-width: 950px){
+    .card-login {
+        width: 85%;
+    }
+}
+
+@media only screen and (max-width: 600px){
+    .main-login {
+        flex-direction: column;   
+    }
+
+    .card-esquerdo > h1 {
+        display: none;
+    }
+
+    .card-esquerdo {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-direito {
+        width: 100%;
+        height: auto;
+    }
+
+    .card-esquerdo > img {
+        width: 50vw;
+    }
+
+}
