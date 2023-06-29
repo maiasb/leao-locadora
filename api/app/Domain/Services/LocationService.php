@@ -29,6 +29,15 @@ class LocationService extends BaseService
     /**
      * @throws BaseExceptions
      */
+    public function update($id, array $filters) {
+        $location = $this->findOneBy('id', $id);
+
+        return $this->repository->update($location->id, $filters);
+    }
+
+    /**
+     * @throws BaseExceptions
+     */
     public function findOneBy($key, $value): Location
     {
         /** @var Location $location */
