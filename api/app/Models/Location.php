@@ -17,6 +17,8 @@ use Illuminate\Database\Eloquent\Model;
  * @property int litros_combustivel_devolucao
  * @property boolean limpo_retirada
  * @property boolean limpo_devolucao
+ * @property double preco
+ * @property double preco_adicional
  * @property int cliente_id
  * @property int carro_id
  * @property Customer customer
@@ -38,6 +40,8 @@ class Location extends Model
         'litros_combustivel_devolucao',
         'limpo_retirada',
         'limpo_devolucao',
+        'preco',
+        'preco_adicional',
         'id_cliente',
         'id_carro'
     ];
