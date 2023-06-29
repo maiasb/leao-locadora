@@ -28,8 +28,8 @@ class LocationService extends BaseService
 
         $location = $this->repository->create($filters);
 
-        if (isset($filters["additionaldrivers"])) {
-            foreach ($filters["additionaldrivers"] as $additional) {
+        if (isset($filters["additionalDrivers"])) {
+            foreach ($filters["additionalDrivers"] as $additional) {
                 $additionalDriver = $this->customerService->create($additional);
 
                 $this->additionalDriverService->create([
