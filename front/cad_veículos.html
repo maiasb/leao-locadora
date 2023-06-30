@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style_cdveiculos_sidbar.css">
+    <link rel="stylesheet" href="styles/style_form_cad_veiculos.css">
+    <script src="https://kit.fontawesome.com/48a84a0bce.js" crossorigin="anonymous"></script>
+    <script src="script_cad_veículos.js" defer></script>
+
+    <title>Cadastro de veículos</title>
+
+</head>
+
+<input type="checkbox" id="check">
+<label for="check">
+    <i class="fas fa-bars" id="btn"></i>
+    <i class="fas fa-times" id="cancel"></i>
+</label>
+
+<div class="sidebar">
+    <header>Menu</header>
+    <a href="#" class="active">
+        <i class="fas fa-qrcode"></i>
+        <span>Painel</span>
+    </a>
+    <a href="#">
+        <i class="fas fa-link"></i>
+        <span>Links</span>
+    </a>
+    <a href="#">
+        <i class="fas fa-stream"></i>
+        <span>Visão Geral</span>
+    </a>
+    <a href="#">
+        <i class="fas fa-calendar"></i>
+        <span>Eventos</span>
+    </a>
+    <a href="#">
+        <i class="fas fa-question-circle"></i>
+        <span>Sobres</span>
+    </a>
+    <a href="#">
+        <i class="fas fa-sliders-h"></i>
+        <span>Serviços</span>
+    </a>
+    <a href="#">
+        <i class="fas fa-envelope"></i>
+        <span>Contatos</span>
+    </a>
+</div>
+<body>
+
+    <div class="container">
+        <div class="form_box">
+            <h2 class="title">Cadastro de veículos</h2>
+            <div class="form-childs">
+                <input type="text" name="Placa" placeholder="Placa" id="placa">
+                <input type="text" name="Renavam" placeholder="Renavam" id="renavam">
+                <input type="text" name="Chassi" placeholder="Chassi" id="chassi">
+                <input type="text" name="Ano de fabricação" placeholder="Fabricação" id="ano_fabricacao">
+                <input type="text" name="Ano do modelo" placeholder="Modelo" id="ano_modelo">
+                <input type="text" name="Marca" placeholder="Marca" id="marca">
+                <input type="text" name="Modelo" placeholder="Modelo" id="modelo">
+                <input type="text" name="Cor" placeholder="Cor" id="cor">
+
+                <div>
+                    <label>Combustível</label>
+                    <select id="tipo_combustivel">
+                        <option value="">Selecionar</option>
+                        <option value="G">Gasolina</option>
+                        <option value="E">Etanol</option>
+                        <option value="A">Álcool</option>
+                    </select>
+                </div>
+
+                <textarea name="Informações adicionais" placeholder="Informações adicionais"></textarea>
+                <button onclick="sendCar()">Salvar</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
