@@ -11,7 +11,7 @@ body {
     font-family: 'Poppins', sans-serif;
 }
 
-label, h2 {
+label {
     color: #ffffff;
 }
 
@@ -19,13 +19,13 @@ label, h2 {
     display: flex;
     justify-content: center;
     align-items: center;
-    background: #ffff;
+    background: #000020;
 }
 
 .form_box {
     display: flex;
     flex-direction: column;
-    background: #ffff;
+    background: #000020 ;
     border-radius: 10px;
     width: 700px;
     height: 95%;
@@ -36,7 +36,6 @@ label, h2 {
     font-size: 24px;
     color: #ffffff;
     border-bottom: thin solid #ffffff;
-
 }
 
 .form_box form {
@@ -46,7 +45,7 @@ label, h2 {
     padding: 30px;
 }
 
-.form_box input, .form_box textarea {
+.form_box input, .form_box textarea, .form_box select {
     width: calc(50% - 8px);
     height: 42px;
     border-radius: 10px;
@@ -88,8 +87,8 @@ label, h2 {
     width: 120px;
     height: 38px;
     border-radius: 10px;
-    background-color: #000020;
-    color: #fada28;
+    background-color: #fada28;
+    color: #000020;
     font-size: 16px;
     font-weight: bold;
     cursor: pointer;

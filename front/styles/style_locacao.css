@@ -34,15 +34,33 @@ label {
 
 .form_box .title{
     padding: 20px 28px;
-    margin: 0;
-    color: #000020;
     font-size: 24px;
-    border-bottom: thin solid #000020;
+    color: #ffffff;
+    border-bottom: thin solid #ffffff;
 }
 
 .form_box .titlecliente{
     font-size: 24px;
     border-bottom: thin solid #000020;
+}
+
+.form_box button {
+    display: block;
+    border: none;
+    outline: none;
+    width: 120px;
+    height: 38px;
+    border-radius: 10px;
+    background-color: #fada28;
+    color: #000020;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.form_box button:hover {
+    background: #000020e3;
 }
 
 .form-childs {
