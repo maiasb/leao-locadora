@@ -1,9 +1,13 @@
 document.addEventListener("DOMContentLoaded", function() {
   function createOptions(data) {
     var select = document.getElementById("select-cars");
-    console.log(data)
 
     select.innerHTML = "";
+
+    var selectOption = document.createElement("option");
+    selectOption.value = "";
+    selectOption.text = "Selecione";
+    select.appendChild(selectOption);
 
     data.forEach(function(item) {
       var option = document.createElement("option");
@@ -29,6 +33,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   getData();
 });
+
 
 
 function sendLocation() {

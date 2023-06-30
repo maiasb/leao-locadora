@@ -52,21 +52,32 @@
         <div class="container">
             <div class="form_box">
                 <h2 class="title">Locação de veículos</h2>
-                <div id="form-childs" class="form-childs">
-                    <select id="tipo_locacao">
-                        <option value=""></option>
-                        <option value="D">Diária</option>
-                        <option value="KM">Quilometragem</option>
-                    </select>
-                    <input type="checkbox" id="seguro">
-                    <label for="seguro">Segurar locação?</label>
-                    <input type="text" placeholder="Data" id="data_retirada">
-                    <input type="text" placeholder="Perícia" id="pericia_retirada">
-                    <input type="text" placeholder="Litragem" id="litros_combustivel_retirada">
-                    <input type="checkbox" id="limpo_retirada">
-                    <label for="limpo_retirada">Veículo limpo?</label>
+                <div class="form-childs">
+                    <div>
+                        <label>Tipo de Locação:</label>
+                        <select id="tipo_locacao">
+                            <option value="">Selecione</option>
+                            <option value="D">Diária</option>
+                            <option value="KM">Quilometragem</option>
+                        </select>
+                    </div>
+                    <div>
+                        <label>Veículo:</label>
+                        <select id="select-cars"></select>
+                   </div>
+                    <input type="date" placeholder="Data" id="data_retirada">
+                    <input type="number" placeholder="Litragem" id="litros_combustivel_retirada">
+
                     <input type="number" placeholder="Valor" id="preco">
-                    <select id="select-cars"></select>
+                    <div class="checks">
+                        <label>Segurar locação?</label>
+                        <input type="checkbox" id="seguro">
+                    </div>
+                    <div class="checks">
+                        <label>Veículo limpo?</label>
+                        <input type="checkbox" id="limpo_retirada">
+                    </div>
+                    <textarea type="text" placeholder="Perícia" id="pericia_retirada"></textarea>
                     <button onclick="sendLocation()">Cadastrar</button>
                 </div>
             </div>
