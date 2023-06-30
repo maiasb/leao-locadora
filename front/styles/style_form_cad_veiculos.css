@@ -1,0 +1,134 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap');
+
+*,::after, ::before {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+body {
+    background-image: #000020;
+    font-family: 'Poppins', sans-serif;
+}
+
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /*width: 100%;
+    height: 100vh;*/
+    background: #ffff;
+}
+
+.form_box {
+    display: flex;
+    flex-direction: column;
+    background: #ffff;
+    border-radius: 10px;
+    width: 700px;
+    height: 95%;
+}
+
+.form_box .title{
+    padding: 20px 28px;
+    font-size: 24px;
+    color: #000020;
+    border-bottom: thin solid #000020;
+
+}
+
+.form_box form {
+    display: flex;
+    align-items: start;
+    flex-wrap: wrap;
+    padding: 30px;
+}
+
+.form_box input, .form_box textarea {
+    width: calc(50% - 8px);
+    height: 42px;
+    border-radius: 10px;
+    border: thin solid #ccc;
+    padding-left: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    background: #ffffff9c;
+    border: thin solid #000020;
+}
+
+.form-childs input:first-child{
+    margin-right: 16px;
+}
+
+
+
+.drop {
+    width: calc(50% - 8px);
+    height: 42px;
+    padding-left: 16px;
+    margin-bottom: 16px;
+    font-size: 16px;
+    color: #000020;
+}
+
+.form_box textarea{
+    width: 100%;
+    height: 100px;
+    padding: 16px;
+    font-family: 'Poppins', sans-serif;
+
+}
+
+.form_box button {
+    display: block;
+    border: none;
+    outline: none;
+    width: 120px;
+    height: 38px;
+    border-radius: 10px;
+    background-color: #000020;
+    color: #fada28;
+    font-size: 16px;
+    font-weight: bold;
+    cursor: pointer;
+    margin-bottom: 10px;
+}
+
+.form_box button:hover {
+    background: #000020e3;
+}
+
+@media only screen and (max-width: 600px) {
+    .form_box form {
+        align-items: center;
+        justify-content: center;
+    }
+
+    .form_box {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 350px;
+    height: 80%;
+    }
+
+    /*.form_box form {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+    }*/
+
+
+    .form_box input:first-child, #chassi, #ano_modelo, #cor{
+        margin-right: none;
+    }
+    
+
+    .form_box textarea {
+        width: 90%;
+        height: 100px;
+    }
+
+
+}
