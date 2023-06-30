@@ -43,14 +43,19 @@ body {
     border-bottom: thin solid #000020;
 }
 
-.form_box form {
+.form-childs {
     display: flex;
+    justify-content: space-between;
     align-items: start;
     flex-wrap: wrap;
     padding: 30px;
 }
 
-.form_box input, .form_box textarea {
+.checks {
+    display: flex;
+}
+
+.form_box input, .form_box textarea, .form_box select {
     width: calc(50% - 8px);
     height: 42px;
     border-radius: 10px;
@@ -67,18 +72,6 @@ body {
 }
 
 .form_box input:first-child{
-    margin-right: 16px;
-}
-
-#third{
-    margin-right: 16px;
-}
-
-#fifth{
-    margin-right: 16px;
-}
-
-#seventh{
     margin-right: 16px;
 }
 
@@ -110,7 +103,7 @@ body {
 
 
 @media only screen and (max-width: 600px) {
-    .form_box form {
+    #form-childs {
         align-items: center;
         justify-content: center;
     }
@@ -122,13 +115,6 @@ body {
     width: 350px;
     height: 80%;
     }
-
-    /*.form_box form {
-        flex-direction: column;
-        align-items: center;
-        justify-content: center;
-    }*/
-
 
     .form_box input:first-child, #third, #fifth, #seventh{
         margin-right: none;
