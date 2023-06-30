@@ -59,7 +59,11 @@ body {
     margin-bottom: 16px;
     font-size: 16px;
     background: #ffffff9c;
+<<<<<<< HEAD
     
+=======
+
+>>>>>>> e32160237868015f56efa38be7ab3261f6259ea7
 }
 
 .form_box input:first-child{
@@ -129,7 +133,7 @@ body {
     .form_box input:first-child, #third, #fifth, #seventh{
         margin-right: none;
     }
-    
+
 
     .form_box textarea {
         width: 90%;
