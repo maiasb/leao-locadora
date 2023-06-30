@@ -14,6 +14,13 @@ class CustomerController extends Controller
         $this->customerService = $customerService;
     }
 
+    public function index(): \Illuminate\Http\JsonResponse
+    {
+        $this->response = $this->customerService->index();
+
+        return response()->json($this->response, Response::HTTP_OK);
+    }
+
     public function store(CustomerRequest $request): \Illuminate\Http\JsonResponse
     {
         $this->response = $this->customerService->create($request->all());

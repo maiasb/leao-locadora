@@ -17,6 +17,11 @@ class CustomerService extends BaseService
         $this->repository = $repository;
     }
 
+    public function index(): Collection|array
+    {
+        return $this->repository->query()->get();
+    }
+
     public function create(array $filters): \Illuminate\Database\Eloquent\Model
     {
         $customer = $this->repository->create($filters);

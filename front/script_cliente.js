@@ -41,8 +41,9 @@ const options = {
 
 fetch('http://127.0.0.1:8000/api/clientes', options)
   .then(response => response.json())
-  .then(response => {
+  .then(() => {
     alert('Cadastrado!')
+    location.reload()
   })
   .catch(err => alert(err));
 }
