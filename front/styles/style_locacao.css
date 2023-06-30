@@ -59,10 +59,6 @@ label {
     margin-bottom: 10px;
 }
 
-.form_box button:hover {
-    background: #000020e3;
-}
-
 .form-childs {
     display: flex;
     justify-content: space-between;
@@ -111,11 +107,6 @@ label {
     font-weight: bold;
     cursor: pointer;
 }
-
-.form_box button:hover {
-    background: #000020e3;
-}
-
 
 @media only screen and (max-width: 600px) {
     #form-childs {

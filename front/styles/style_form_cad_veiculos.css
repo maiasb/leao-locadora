@@ -95,10 +95,6 @@ label {
     margin-bottom: 10px;
 }
 
-.form_box button:hover {
-    background: #000020e3;
-}
-
 @media only screen and (max-width: 600px) {
     .form_box form {
         align-items: center;
