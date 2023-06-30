@@ -33,8 +33,8 @@ const options = {
 
  fetch('http://127.0.0.1:8000/api/carros', options)
  .then(response => response.json())
- .then(response => console.log(response))
+ .then(response => {
+  alert('Cadastrado!')
+  location.reload()})
  .catch(err => console.error(err));//
-
-//  location.reload()
 }

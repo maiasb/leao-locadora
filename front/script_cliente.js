@@ -1,11 +1,10 @@
 
-function sendClient (){
-  
+function sendCustomer (){
 const nome = document.getElementById('nome').value;
 const cpf = document.getElementById('cpf').value;
 const nascimento = document.getElementById('data-nasc').value;
 const telefone = document.getElementById('telefone').value;
-const whatsapp = document.getElementById('whatsapp').value;
+const whatsapp = document.getElementById('whatsapp').checked;
 const cep = document.getElementById('cep').value;
 const cidade = document.getElementById('cidade').value;
 const bairro = document.getElementById('bairro').value;
@@ -42,6 +41,8 @@ const options = {
 
 fetch('http://127.0.0.1:8000/api/clientes', options)
   .then(response => response.json())
-  .then(response => console.log(response))
-  .catch(err => console.error(err));
+  .then(response => {
+    alert('Cadastrado!')
+  })
+  .catch(err => alert(err));
 }

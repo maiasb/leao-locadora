@@ -5,7 +5,7 @@
     padding: 0;
     box-sizing: border-box;
     font-family:'Poppins', sans-serif;
-    
+
 }
 body {
     width: 100vw;
@@ -26,9 +26,9 @@ body {
 }
 .main-container {
     background-color: #ffffff;
-    
+
     width: 580px;
-    height: 650px;
+    height: 100vh;
     border-radius: 8px;
     box-shadow: 0 0 10px 0 #8c8c8c;
     line-height: 2.5em ;
@@ -37,14 +37,6 @@ body {
 .main-container h1{
     text-align: center;
     font-size: 1.4rem;
-}
-
-form{
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-content: center;
-    padding-left: 30px;
 }
 
 input, label{
@@ -73,6 +65,14 @@ input {
     height: 30px;
 }
 
+#register-form {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    padding-left: 30px;
+}
+
 #categoria {
     border-radius: 8px;
     font-size: 11px;
@@ -94,7 +94,7 @@ input {
 
 #rua {
     width: 85%;
-    
+
 }
 #numero {
     width: 20%;
@@ -134,7 +134,7 @@ input:focus, label:focus{
 
 .half-box{
     flex: 1 1 35%;
-    position: relative;   
+    position: relative;
 }
 
 
@@ -199,10 +199,10 @@ label.arquivo{
     border: 1px solid #333;
     background: #333;
     color: #fff;
-    
+
 }
 label.arquivo:hover{
     color:#333;
     background: #fff;
-    
+
 }
