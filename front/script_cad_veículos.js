@@ -36,5 +36,5 @@ const options = {
  .then(response => console.log(response))
  .catch(err => console.error(err));//
 
-//  location.reload()
+  location.reload()
 }

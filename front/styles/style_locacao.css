@@ -7,12 +7,13 @@
 }
 
 body {
-    background: #ffff;
+    background: #f8d588 ;
     font-family: 'Poppins', sans-serif;
 }
 
 
-.container {
+
+.container01 {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -23,7 +24,7 @@ body {
 .form_box {
     display: flex;
     flex-direction: column;
-    background: #ffff;
+    background: #f8d588 ;
     border-radius: none;
     width: 700px;
     height: 95%;
@@ -32,14 +33,14 @@ body {
 .form_box .title{
     padding: 20px 28px;
     margin: 0;
+    color: #000020;
     font-size: 24px;
-    border-bottom: thin solid #ccc;
+    border-bottom: thin solid #000020;
 }
 
 .form_box .titlecliente{
-    padding: 0;
-    margin: 0;
     font-size: 24px;
+    border-bottom: thin solid #000020;
 }
 
 .form_box form {
@@ -53,10 +54,12 @@ body {
     width: calc(50% - 8px);
     height: 42px;
     border-radius: 10px;
-    border: thin solid #ccc;
+    border: thin solid #000020;
     padding-left: 16px;
     margin-bottom: 16px;
     font-size: 16px;
+    background: #ffffff9c;
+
 }
 
 .form_box input:first-child{
@@ -83,7 +86,7 @@ body {
 
 }
 
-.form_box button {
+ .form_box_button {
     display: block;
     border: none;
     outline: none;
@@ -126,7 +129,7 @@ body {
     .form_box input:first-child, #third, #fifth, #seventh{
         margin-right: none;
     }
-    
+
 
     .form_box textarea {
         width: 90%;
