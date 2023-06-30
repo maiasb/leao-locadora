@@ -3,84 +3,87 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="styles/style_cdveiculos_sidbar.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+
+    <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="styles/style_locacao.css">
-    <script src="https://kit.fontawesome.com/48a84a0bce.js" crossorigin="anonymous"></script>
     <script src="script_locacao.js" defer></script>
     <title>Cadastro de veículos</title>
 
 </head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <a class="navbar-brand" href="index.html">Leão Locadora</a>
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#conteudoNavbarSuportado" aria-controls="conteudoNavbarSuportado" aria-expanded="false" aria-label="Alterna navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
 
-    <input type="checkbox" id="check">
-    <label for="check">
-        <i class="fas fa-bars" id="btn"></i>
-        <i class="fas fa-times" id="cancel"></i>
-    </label>
+        <div class="collapse navbar-collapse" id="conteudoNavbarSuportado">
+          <ul class="navbar-nav mr-auto">
+            <li class="nav-item">
+                <a class="nav-link" href="#">Clientes</a>
+              </li>
+            <li class="nav-item">
+                <a class="nav-link" href="./cadastro-de-veiculos.html">Veículos</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Vencimentos</a>
+              </li>
 
-    <div class="sidebar">
-        <header>Menu</header>
-        <a href="#" class="active">
-            <i class="fas fa-qrcode"></i>
-            <span>Painel</span>
-        </a>
-        <a href="#">
-            <i class="fas fa-link"></i>
-            <span>Links</span>
-        </a>
-        <a href="#">
-            <i class="fas fa-stream"></i>
-            <span>Visão Geral</span>
-        </a>
-        <a href="#">
-            <i class="fas fa-calendar"></i>
-            <span>Eventos</span>
-        </a>
-        <a href="#">
-            <i class="fas fa-question-circle"></i>
-            <span>Sobres</span>
-        </a>
-        <a href="#">
-            <i class="fas fa-sliders-h"></i>
-            <span>Serviços</span>
-        </a>
-        <a href="#">
-            <i class="fas fa-envelope"></i>
-            <span>Contatos</span>
-        </a>
-    </div>
-    <body>
-        <div class="container">
-            <div class="form_box">
-                <h2 class="title">Locação de veículos</h2>
-                <div class="form-childs">
-                    <div>
-                        <label>Tipo de Locação:</label>
-                        <select id="tipo_locacao">
-                            <option value="">Selecione</option>
-                            <option value="D">Diária</option>
-                            <option value="KM">Quilometragem</option>
-                        </select>
-                    </div>
-                    <div>
-                        <label>Veículo:</label>
-                        <select id="select-cars"></select>
-                   </div>
-                    <input type="date" placeholder="Data" id="data_retirada">
-                    <input type="number" placeholder="Litragem" id="litros_combustivel_retirada">
+          </ul>
+          <form class="form-inline my-2 my-lg-0">
+            <input class="form-control mr-sm-2" type="search" placeholder="Pesquisar" aria-label="Pesquisar">
+            <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Pesquisar</button>
+          </form>
+        </div>
+      </nav>
 
-                    <input type="number" placeholder="Valor" id="preco">
-                    <div class="checks">
-                        <label>Segurar locação?</label>
-                        <input type="checkbox" id="seguro">
-                    </div>
-                    <div class="checks">
-                        <label>Veículo limpo?</label>
-                        <input type="checkbox" id="limpo_retirada">
-                    </div>
-                    <textarea type="text" placeholder="Perícia" id="pericia_retirada"></textarea>
-                    <button onclick="sendLocation()">Cadastrar</button>
+      <ul class="nav justify-content-end">
+        <li class="nav-item">
+          <a class="nav-link active" href="#" style="color: white;">Perfil</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: white;">notificações</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="#" style="color: white;">Sair</a>
+        </li>
+      </ul>
+
+    <div class="container">
+        <div class="form_box">
+            <h2 class="title">Locação de veículos</h2>
+            <div class="form-childs">
+                <div>
+                    <label>Tipo de Locação:</label>
+                    <select id="tipo_locacao">
+                        <option value="">Selecione</option>
+                        <option value="D">Diária</option>
+                        <option value="KM">Quilometragem</option>
+                    </select>
                 </div>
+                <div>
+                    <label>Veículo:</label>
+                    <select id="select-cars"></select>
+                </div>
+                <input type="date" placeholder="Data" id="data_retirada">
+                <input type="number" placeholder="Litragem" id="litros_combustivel_retirada">
+
+                <input type="number" placeholder="Valor" id="preco">
+                <div class="checks">
+                    <label>Segurar locação?</label>
+                    <input type="checkbox" id="seguro">
+                </div>
+                <div class="checks">
+                    <label>Veículo limpo?</label>
+                    <input type="checkbox" id="limpo_retirada">
+                </div>
+                <textarea type="text" placeholder="Perícia" id="pericia_retirada"></textarea>
+                <button onclick="sendLocation()">Cadastrar</button>
             </div>
         </div>
-    </body>
+    </div>
+</body>
 </html>
