@@ -52,7 +52,8 @@ export function CustomerList() {
       </CardHeader>
       <Card>
         <CardContent>
-          {customersResponse &&
+          {(customersResponse &&
+            customersResponse.length &&
             customersResponse.map((customer) => (
               <Item key={customer.id}>
                 <DataItem>
@@ -79,7 +80,7 @@ export function CustomerList() {
                   </IconButton>
                 </DataItem>
               </Item>
-            ))}
+            ))) || <Typography>Nenhum cliente cadastrado</Typography>}
         </CardContent>
       </Card>
       <CardFooter>
