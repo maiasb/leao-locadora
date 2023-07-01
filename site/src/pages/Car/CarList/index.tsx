@@ -75,9 +75,7 @@ export function CarList() {
         </CardContent>
       </Card>
       <CardFooter>
-        <Button variant="outlined" color="error">
-          Voltar
-        </Button>
+        <span></span>
         <Button
           variant="contained"
           onClick={() => navigate('/carros/cadastrar')}

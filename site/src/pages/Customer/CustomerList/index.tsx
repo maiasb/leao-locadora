@@ -87,9 +87,7 @@ export function CustomerList() {
         </CardContent>
       </Card>
       <CardFooter>
-        <Button variant="outlined" color="error">
-          Voltar
-        </Button>
+        <span></span>
         <Button
           variant="contained"
           onClick={() => navigate('/clientes/cadastrar')}
