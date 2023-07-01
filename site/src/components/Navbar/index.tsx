@@ -3,8 +3,15 @@ import { Content, Navigation, SettingsArea } from './styles'
 import AccountCircleIcon from '@mui/icons-material/AccountCircle'
 import SettingsIcon from '@mui/icons-material/Settings'
 import LogoutIcon from '@mui/icons-material/Logout'
+import { useNavigate } from 'react-router-dom'
 
 export function Navbar() {
+  const navigate = useNavigate()
+
+  function handleLogOut() {
+    navigate('/')
+  }
+
   return (
     <Content>
       <Navigation>
@@ -36,7 +43,7 @@ export function Navbar() {
         <IconButton sx={{ color: 'white' }}>
           <SettingsIcon />
         </IconButton>
-        <IconButton sx={{ color: 'white' }}>
+        <IconButton sx={{ color: 'white' }} onClick={handleLogOut}>
           <LogoutIcon />
         </IconButton>
       </SettingsArea>
