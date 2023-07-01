@@ -7,16 +7,16 @@ export function Address() {
       <Typography>Endereço</Typography>
       <Content>
         <Section>
-          <TextField fullWidth label="CEP" />
-          <TextField fullWidth label="Cidade" />
+          <TextField size="small" fullWidth label="CEP" />
+          <TextField size="small" fullWidth label="Cidade" />
         </Section>
         <Section>
-          <TextField fullWidth label="Bairro" />
-          <TextField fullWidth label="Rua" />
+          <TextField size="small" fullWidth label="Bairro" />
+          <TextField size="small" fullWidth label="Rua" />
         </Section>
         <Section>
-          <TextField fullWidth label="Número" />
-          <TextField fullWidth label="Complemento" />
+          <TextField size="small" fullWidth label="Número" />
+          <TextField size="small" fullWidth label="Complemento" />
         </Section>
       </Content>
     </Container>

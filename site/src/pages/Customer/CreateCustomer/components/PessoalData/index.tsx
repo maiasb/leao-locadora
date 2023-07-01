@@ -13,11 +13,11 @@ export function PessoalData() {
       <Typography>Dados Pessoais</Typography>
       <Content>
         <Section>
-          <TextField fullWidth label="Nome" />
-          <TextField fullWidth label="CPF" />
+          <TextField size="small" fullWidth label="Nome" />
+          <TextField size="small" fullWidth label="CPF" />
         </Section>
         <Section>
-          <TextField fullWidth label="Nascimento" />
+          <TextField size="small" fullWidth label="Nascimento" />
           <Box
             sx={{
               display: 'flex',
@@ -26,7 +26,7 @@ export function PessoalData() {
               width: '100%',
             }}
           >
-            <TextField fullWidth label="Telefone" />
+            <TextField size="small" fullWidth label="Telefone" />
             <FormControlLabel
               control={<Checkbox defaultChecked />}
               label="Whatsapp?"
