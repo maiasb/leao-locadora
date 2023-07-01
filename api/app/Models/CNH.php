@@ -8,6 +8,7 @@ use Illuminate\Database\Eloquent\Model;
  * @property int id
  * @property string numero
  * @property string categoria
+ * @property string data_emissao
  * @property string data_provisoria
  * @property int id_cliente
  */
@@ -19,6 +20,7 @@ class CNH extends Model
     protected $fillable = [
         'numero',
         'categoria',
+        'data_emissao',
         'data_provisoria',
         'id_cliente'
     ];
