@@ -6,6 +6,7 @@ import { Home } from './pages/Home'
 import { CreateCustomer } from './pages/Customer/CreateCustomer'
 import './App.scss'
 import '@fontsource/roboto/300.css'
+import { CustomerList } from './pages/Customer/CustomerList'
 
 function Layout() {
   return (
@@ -25,6 +26,7 @@ function App() {
           <Route path="/registrar" element={<SignUp />} />
           <Route element={<Layout />}>
             <Route path="/home" element={<Home />} />
+            <Route path="/clientes" element={<CustomerList />} />
             <Route path="/clientes/cadastrar" element={<CreateCustomer />} />
           </Route>
         </Routes>

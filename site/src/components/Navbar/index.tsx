@@ -11,11 +11,7 @@ export function Navbar() {
         <Link href="/home" underline="none" sx={{ color: 'white' }}>
           Leão locadora
         </Link>
-        <Link
-          href="/clientes/cadastrar"
-          underline="none"
-          sx={{ color: 'white' }}
-        >
+        <Link href="/clientes" underline="none" sx={{ color: 'white' }}>
           Clientes
         </Link>
         <Link
