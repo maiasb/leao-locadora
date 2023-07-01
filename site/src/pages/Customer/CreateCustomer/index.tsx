@@ -1,9 +1,12 @@
-import { Typography } from '@mui/material'
+import { Content } from './styles'
+import { PessoalData } from './components/PessoalData'
+import { Address } from './components/Address'
 
 export function CreateCustomer() {
   return (
-    <div>
-      <Typography>Create Customer</Typography>
-    </div>
+    <Content>
+      <PessoalData />
+      <Address />
+    </Content>
   )
 }
