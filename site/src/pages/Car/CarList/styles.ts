@@ -15,7 +15,7 @@ export const CardHeader = styled.div`
   padding: 20px;
 `
 export const ItemHeader = styled(Typography)`
-  color: yellow;
+  color: gray;
 `
 
 export const Item = styled.div`
