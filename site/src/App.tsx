@@ -1,10 +1,11 @@
 import { BrowserRouter, Outlet, Route, Routes } from 'react-router-dom'
+import { SignIn } from './pages/components/SignIn'
+import { SignUp } from './pages/components/SignUp'
+import { Navbar } from './pages/components/Navbar'
 import { Home } from './pages/Home'
 import { CreateCustomer } from './pages/Customer/CreateCustomer'
-import { Navbar } from './pages/components/Navbar'
 import './App.scss'
 import '@fontsource/roboto/300.css'
-import { Login } from './pages/components/Login'
 
 function Layout() {
   return (
@@ -20,7 +21,8 @@ function App() {
     <>
       <BrowserRouter>
         <Routes>
-          <Route path="/" element={<Login />} />
+          <Route path="/" element={<SignIn />} />
+          <Route path="/registrar" element={<SignUp />} />
           <Route element={<Layout />}>
             <Route path="/home" element={<Home />} />
             <Route path="/clientes/cadastrar" element={<CreateCustomer />} />

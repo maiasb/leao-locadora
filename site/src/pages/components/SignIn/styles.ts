@@ -3,19 +3,21 @@ import { styled } from 'styled-components'
 
 export const Content = styled.div`
   display: flex;
+  padding-right: 100px;
   height: 100%;
-  padding: 100px;
   justify-content: end;
+  align-items: center;
 `
 export const Card = styled(MuiCard)`
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 500px;
+  width: 400px;
   gap: 50px;
-  padding: 50px 20px;
+  padding: 30px 35px;
 `
-export const InputData = styled.div`
+export const AreaLinks = styled.div`
   display: flex;
   flex-direction: column;
+  gap: 15px;
 `
