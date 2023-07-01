@@ -1,9 +1,10 @@
-import { Typography } from '@mui/material'
+import { Emphasis } from './components/Emphasis'
+import { Container } from './styles'
 
 export function Home() {
   return (
-    <div>
-      <Typography>Home</Typography>
-    </div>
+    <Container>
+      <Emphasis />
+    </Container>
   )
 }
