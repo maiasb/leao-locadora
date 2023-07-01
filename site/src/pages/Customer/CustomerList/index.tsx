@@ -22,10 +22,6 @@ export function CustomerList() {
   const navigate = useNavigate()
   const { data: customerListFetchResponse } = CustomerListFetch()
 
-  function handleNavigateToCreateCustomer() {
-    navigate('/clientes/cadastrar')
-  }
-
   return (
     <Content>
       <CardHeader>
@@ -94,7 +90,10 @@ export function CustomerList() {
         <Button variant="outlined" color="error">
           Voltar
         </Button>
-        <Button variant="contained" onClick={handleNavigateToCreateCustomer}>
+        <Button
+          variant="contained"
+          onClick={() => navigate('/clientes/cadastrar')}
+        >
           Adicionar novo cliente
         </Button>
       </CardFooter>

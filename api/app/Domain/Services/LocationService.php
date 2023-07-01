@@ -17,6 +17,14 @@ class LocationService extends BaseService
         $this->repository = $repository;
     }
 
+    public function index(): Collection|array
+    {
+        return $this->repository->query()
+            ->join('clientes', 'locacoes.id_cliente', '=', 'clientes.id')
+            ->join('carros', 'locacoes.id_carro', '=', 'carros.id')
+            ->get();
+    }
+
     /**
      * @throws BaseExceptions
      */

@@ -6,6 +6,7 @@ import {
   Skeleton,
   Typography,
 } from '@mui/material'
+import { LocationListfetch } from '../../../fetches/locationListFetch'
 import {
   CardFooter,
   CardHeader,
@@ -16,11 +17,10 @@ import {
 } from './styles'
 import ModeEditIcon from '@mui/icons-material/ModeEdit'
 import { useNavigate } from 'react-router-dom'
-import { CarListfetch } from '../../../fetches/carListFetch'
 
-export function CarList() {
+export function LocationList() {
   const navigate = useNavigate()
-  const { data: carListFetchResponse } = CarListfetch()
+  const { data: locationListFetchResponse } = LocationListfetch()
 
   return (
     <Content>
@@ -29,13 +29,13 @@ export function CarList() {
           <ItemHeader>ID</ItemHeader>
         </DataItem>
         <DataItem>
-          <ItemHeader>Marca</ItemHeader>
+          <ItemHeader>Cliente</ItemHeader>
         </DataItem>
         <DataItem>
-          <ItemHeader>Modelo</ItemHeader>
+          <ItemHeader>Carro</ItemHeader>
         </DataItem>
         <DataItem>
-          <ItemHeader>Cor</ItemHeader>
+          <ItemHeader>Data de Retirada</ItemHeader>
         </DataItem>
         <DataItem>
           <ItemHeader>Opções</ItemHeader>
@@ -43,21 +43,21 @@ export function CarList() {
       </CardHeader>
       <Card>
         <CardContent>
-          {(carListFetchResponse &&
-            ((carListFetchResponse.length &&
-              carListFetchResponse.map((car) => (
-                <Item key={car.id}>
+          {(locationListFetchResponse &&
+            ((locationListFetchResponse.length &&
+              locationListFetchResponse.map((location) => (
+                <Item key={location.id}>
                   <DataItem>
-                    <Typography>{car.id}</Typography>
+                    <Typography>{location.id}</Typography>
                   </DataItem>
                   <DataItem>
-                    <Typography>{car.marca}</Typography>
+                    <Typography>{location.nome}</Typography>
                   </DataItem>
                   <DataItem>
-                    <Typography>{car.modelo}</Typography>
+                    <Typography>{location.modelo}</Typography>
                   </DataItem>
                   <DataItem>
-                    <Typography>{car.cor}</Typography>
+                    <Typography>{location.data_retirada}</Typography>
                   </DataItem>
                   <DataItem>
                     <IconButton>
@@ -65,7 +65,7 @@ export function CarList() {
                     </IconButton>
                   </DataItem>
                 </Item>
-              ))) || <Typography>Nenhum carro cadastrado</Typography>)) || (
+              ))) || <Typography>Nenhuma locação cadastrada</Typography>)) || (
             <>
               <Skeleton />
               <Skeleton />
@@ -80,9 +80,9 @@ export function CarList() {
         </Button>
         <Button
           variant="contained"
-          onClick={() => navigate('/carros/cadastrar')}
+          onClick={() => navigate('/locacoes/cadastrar')}
         >
-          Adicionar novo carro
+          Cadastrar nova locação
         </Button>
       </CardFooter>
     </Content>

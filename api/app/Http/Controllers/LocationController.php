@@ -15,6 +15,13 @@ class LocationController extends Controller
         $this->locationService = $locationService;
     }
 
+    public function index(): \Illuminate\Http\JsonResponse
+    {
+        $this->response = $this->locationService->index();
+
+        return response()->json($this->response, Response::HTTP_OK);
+    }
+
     public function store(LocationRequest $request): \Illuminate\Http\JsonResponse
     {
         $this->response = $this->locationService->create($request->all());
@@ -28,13 +35,6 @@ class LocationController extends Controller
     public function update($id, LocationRequest $request): \Illuminate\Http\JsonResponse
     {
         $this->response = $this->locationService->update($id, $request->all());
-
-        return response()->json($this->response, Response::HTTP_OK);
-    }
-
-    public function customerLocationHistory($idCustomer): \Illuminate\Http\JsonResponse
-    {
-        $this->response = $this->locationService->findBy('id_cliente', $idCustomer);
 
         return response()->json($this->response, Response::HTTP_OK);
     }
