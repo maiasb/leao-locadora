@@ -6,6 +6,7 @@ import { useState } from 'react'
 import api from '../../../services/api'
 import { Button } from '@mui/material'
 import { useNavigate } from 'react-router-dom'
+import { toast } from 'react-hot-toast'
 
 export function CreateCustomer() {
   const navigate = useNavigate()
@@ -53,8 +54,29 @@ export function CreateCustomer() {
 
     api
       .post('/api/clientes', body)
-      .then((response) => console.log(response))
-      .catch((err) => console.log(err))
+      .then(() => {
+        toast.success('Cliente cadastrado!')
+        clearPage()
+      })
+      .catch((err) => toast.error(err.message))
+  }
+
+  function clearPage() {
+    setName('')
+    setCpf('')
+    setBirth('')
+    setPhone('')
+    setIsPhoneWhatsapp(false)
+    setZipCode('')
+    setCity('')
+    setNeighborhood('')
+    setStreet('')
+    setAddressNumber('')
+    setComplement('')
+    setLicenseNumber('')
+    setLicenseCategory('')
+    setIssueDate('')
+    setOriginalIssueDate('')
   }
 
   return (

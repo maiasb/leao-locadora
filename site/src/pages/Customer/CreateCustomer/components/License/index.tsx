@@ -48,6 +48,7 @@ export function License({
               value={licenseCategory}
               onChange={(e) => setLicenseCategory(e.target.value)}
             >
+              <MenuItem value="">Selecione</MenuItem>
               <MenuItem value="B">B</MenuItem>
               <MenuItem value="C">C</MenuItem>
               <MenuItem value="D">D</MenuItem>
