@@ -3,6 +3,7 @@ import {
   Card,
   CardContent,
   IconButton,
+  Skeleton,
   Typography,
 } from '@mui/material'
 import { Customersfetch } from '../../../fetches/customerFetch'
@@ -53,34 +54,40 @@ export function CustomerList() {
       <Card>
         <CardContent>
           {(customersResponse &&
-            customersResponse.length &&
-            customersResponse.map((customer) => (
-              <Item key={customer.id}>
-                <DataItem>
-                  <Typography>{customer.id}</Typography>
-                </DataItem>
-                <DataItem>
-                  <Typography>{customer.nome}</Typography>
-                </DataItem>
-                <DataItem>
-                  <Typography>{customer.cpf}</Typography>
-                </DataItem>
-                <DataItem>
-                  <Typography>{customer.nascimento}</Typography>
-                </DataItem>
-                <DataItem>
-                  <Typography>{customer.telefone}</Typography>
-                </DataItem>
-                <DataItem>
-                  <Typography>{customer.whatsapp}</Typography>
-                </DataItem>
-                <DataItem>
-                  <IconButton>
-                    <ModeEditIcon />
-                  </IconButton>
-                </DataItem>
-              </Item>
-            ))) || <Typography>Nenhum cliente cadastrado</Typography>}
+            ((customersResponse.length &&
+              customersResponse.map((customer) => (
+                <Item key={customer.id}>
+                  <DataItem>
+                    <Typography>{customer.id}</Typography>
+                  </DataItem>
+                  <DataItem>
+                    <Typography>{customer.nome}</Typography>
+                  </DataItem>
+                  <DataItem>
+                    <Typography>{customer.cpf}</Typography>
+                  </DataItem>
+                  <DataItem>
+                    <Typography>{customer.nascimento}</Typography>
+                  </DataItem>
+                  <DataItem>
+                    <Typography>{customer.telefone}</Typography>
+                  </DataItem>
+                  <DataItem>
+                    <Typography>{customer.whatsapp}</Typography>
+                  </DataItem>
+                  <DataItem>
+                    <IconButton>
+                      <ModeEditIcon />
+                    </IconButton>
+                  </DataItem>
+                </Item>
+              ))) || <Typography>Nenhum cliente cadastrado</Typography>)) || (
+            <>
+              <Skeleton />
+              <Skeleton />
+              <Skeleton />
+            </>
+          )}
         </CardContent>
       </Card>
       <CardFooter>
