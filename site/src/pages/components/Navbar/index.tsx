@@ -1,10 +1,13 @@
-import { Typography } from '@mui/material'
-import { Content } from './styles'
+import { Link } from 'react-router-dom'
+import { Content, Navigation, Typography } from './styles'
 
 export function Navbar() {
   return (
     <Content>
-      <Typography color="white">Nav</Typography>
+      <Navigation>
+        <Typography>Leão locadora</Typography>
+        <Link to="/clientes/cadastro">Clientes</Link>
+      </Navigation>
     </Content>
   )
 }
