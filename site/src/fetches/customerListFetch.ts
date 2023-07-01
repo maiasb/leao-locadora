@@ -2,9 +2,9 @@ import useSWR from 'swr'
 import api from '../services/api'
 import { Customer } from '../models/Customer'
 
-export const Customersfetch = () => {
+export const CustomerListFetch = () => {
   const { data } = useSWR<Customer[]>(
-    'customers',
+    'customer_list',
     async (): Promise<Customer[]> => {
       const { data: results } = await api.get(`/api/clientes/`)
 

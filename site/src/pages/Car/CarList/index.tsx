@@ -6,7 +6,6 @@ import {
   Skeleton,
   Typography,
 } from '@mui/material'
-import { CustomerListFetch } from '../../../fetches/customerListFetch'
 import {
   CardFooter,
   CardHeader,
@@ -17,13 +16,14 @@ import {
 } from './styles'
 import ModeEditIcon from '@mui/icons-material/ModeEdit'
 import { useNavigate } from 'react-router-dom'
+import { CarListfetch } from '../../../fetches/carListFetch'
 
-export function CustomerList() {
+export function CarList() {
   const navigate = useNavigate()
-  const { data: customerListFetchResponse } = CustomerListFetch()
+  const { data: carListFetchResponse } = CarListfetch()
 
-  function handleNavigateToCreateCustomer() {
-    navigate('/clientes/cadastrar')
+  function handleNavigateToCreateCar() {
+    navigate('/carros/cadastrar')
   }
 
   return (
@@ -33,19 +33,13 @@ export function CustomerList() {
           <ItemHeader>ID</ItemHeader>
         </DataItem>
         <DataItem>
-          <ItemHeader>Nome</ItemHeader>
+          <ItemHeader>Marca</ItemHeader>
         </DataItem>
         <DataItem>
-          <ItemHeader>CPF</ItemHeader>
+          <ItemHeader>Modelo</ItemHeader>
         </DataItem>
         <DataItem>
-          <ItemHeader>Nascimento</ItemHeader>
-        </DataItem>
-        <DataItem>
-          <ItemHeader>Telefone</ItemHeader>
-        </DataItem>
-        <DataItem>
-          <ItemHeader>É whatsapp?</ItemHeader>
+          <ItemHeader>Cor</ItemHeader>
         </DataItem>
         <DataItem>
           <ItemHeader>Opções</ItemHeader>
@@ -53,27 +47,21 @@ export function CustomerList() {
       </CardHeader>
       <Card>
         <CardContent>
-          {(customerListFetchResponse &&
-            ((customerListFetchResponse.length &&
-              customerListFetchResponse.map((customer) => (
-                <Item key={customer.id}>
+          {(carListFetchResponse &&
+            ((carListFetchResponse.length &&
+              carListFetchResponse.map((car) => (
+                <Item key={car.id}>
                   <DataItem>
-                    <Typography>{customer.id}</Typography>
+                    <Typography>{car.id}</Typography>
                   </DataItem>
                   <DataItem>
-                    <Typography>{customer.nome}</Typography>
+                    <Typography>{car.marca}</Typography>
                   </DataItem>
                   <DataItem>
-                    <Typography>{customer.cpf}</Typography>
+                    <Typography>{car.modelo}</Typography>
                   </DataItem>
                   <DataItem>
-                    <Typography>{customer.nascimento}</Typography>
-                  </DataItem>
-                  <DataItem>
-                    <Typography>{customer.telefone}</Typography>
-                  </DataItem>
-                  <DataItem>
-                    <Typography>{customer.whatsapp}</Typography>
+                    <Typography>{car.cor}</Typography>
                   </DataItem>
                   <DataItem>
                     <IconButton>
@@ -81,7 +69,7 @@ export function CustomerList() {
                     </IconButton>
                   </DataItem>
                 </Item>
-              ))) || <Typography>Nenhum cliente cadastrado</Typography>)) || (
+              ))) || <Typography>Nenhum carro cadastrado</Typography>)) || (
             <>
               <Skeleton />
               <Skeleton />
@@ -94,8 +82,8 @@ export function CustomerList() {
         <Button variant="outlined" color="error">
           Voltar
         </Button>
-        <Button variant="contained" onClick={handleNavigateToCreateCustomer}>
-          Adicionar novo cliente
+        <Button variant="contained" onClick={handleNavigateToCreateCar}>
+          Adicionar novo carro
         </Button>
       </CardFooter>
     </Content>

@@ -7,6 +7,7 @@ import { CreateCustomer } from './pages/Customer/CreateCustomer'
 import './App.scss'
 import '@fontsource/roboto/300.css'
 import { CustomerList } from './pages/Customer/CustomerList'
+import { CarList } from './pages/Car/CarList'
 
 function Layout() {
   return (
@@ -24,10 +25,12 @@ function App() {
         <Routes>
           <Route path="/" element={<SignIn />} />
           <Route path="/registrar" element={<SignUp />} />
+
           <Route element={<Layout />}>
             <Route path="/home" element={<Home />} />
             <Route path="/clientes" element={<CustomerList />} />
             <Route path="/clientes/cadastrar" element={<CreateCustomer />} />
+            <Route path="/carros" element={<CarList />} />
           </Route>
         </Routes>
       </BrowserRouter>
