@@ -21,18 +21,10 @@ export function Navbar() {
         <Link href="/clientes" underline="none" sx={{ color: 'white' }}>
           Clientes
         </Link>
-        <Link
-          href="/clientes/cadastrar"
-          underline="none"
-          sx={{ color: 'white' }}
-        >
+        <Link href="/carros" underline="none" sx={{ color: 'white' }}>
           Carros
         </Link>
-        <Link
-          href="/clientes/cadastrar"
-          underline="none"
-          sx={{ color: 'white' }}
-        >
+        <Link href="/locacoes" underline="none" sx={{ color: 'white' }}>
           Locação
         </Link>
       </Navigation>
