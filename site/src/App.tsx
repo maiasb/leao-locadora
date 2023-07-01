@@ -11,6 +11,7 @@ import { CarList } from './pages/Car/CarList'
 import { CreateCar } from './pages/Car/CreateCar'
 import { Toaster } from 'react-hot-toast'
 import { LocationList } from './pages/Location/LocationList'
+import { CreateLocation } from './pages/Location/CreateLocation'
 
 function Layout() {
   return (
@@ -37,6 +38,7 @@ function App() {
             <Route path="/carros" element={<CarList />} />
             <Route path="/carros/cadastrar" element={<CreateCar />} />
             <Route path="/locacoes/" element={<LocationList />} />
+            <Route path="/locacoes/cadastrar" element={<CreateLocation />} />
           </Route>
         </Routes>
       </BrowserRouter>
