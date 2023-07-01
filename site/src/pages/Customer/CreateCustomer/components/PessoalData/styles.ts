@@ -16,4 +16,8 @@ export const Section = styled.div`
   display: flex;
   width: 100%;
   gap: 30px;
+
+  @media (max-width: 1023px) {
+    flex-direction: column;
+  }
 `
